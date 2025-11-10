@@ -1,7 +1,9 @@
----
-title: Welcome to Quartz 4
----
+# 欢迎使用 Quartz 4
+Quartz 是一款高效、功能完备的静态网站生成器，可将 Markdown 格式的内容转换为功能完整的网站。目前已有数千名学生、开发者和教师通过它将个人笔记、维基百科式文档以及[数字花园](https://jzhao.xyz/posts/networked-thought)（一种非线性、持续生长的个人知识库）发布到网络上。
 
-Quartz is a fast, batteries-included static-site generator that transforms Markdown content into fully functional websites. Thousands of students, developers, and teachers publish personal notes, wikis, and [digital gardens](https://jzhao.xyz/posts/networked-thought) to the web.
+更多详情请参阅[官方文档](https://quartz.jzhao.xyz/)。
 
-See the [official documentation](https://quartz.jzhao.xyz/) for more details.
+
+### 补充说明
+- **静态网站生成器（static-site generator）**：指将本地文档（如本文提到的 Markdown 文件）预先转换为静态 HTML、CSS、JavaScript 文件的工具，生成的网站可直接部署到服务器，加载速度快且安全性高，区别于需要实时从数据库读取内容的动态网站。
+- **Markdown**：一种轻量级标记语言，通过简单的符号（如 `#` 表示标题、`[]()` 表示链接）实现文本格式化，广泛用于笔记、文档和代码仓库说明，兼顾易读性与易写性。
