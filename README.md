@@ -1,55 +1,67 @@
-# Quartz v4 Template for GitHub pages
+# Quartz v4 GitHub Pages 模板
 
-[Quartz][] is a set of tools that helps you publish your [digital garden](https://jzhao.xyz/posts/networked-thought) and notes as a website for free.
+[Quartz][] 是一套工具，可帮助你将个人[数字花园](https://jzhao.xyz/posts/networked-thought)（数字笔记库）和笔记以网站形式免费发布。
 
-This template repository
-
-- uses [Quartz][] by Jacky Zhao as a git submodule to catch up its rapid development.
-- builds the website from the notes and publishes to GitHub pages by GitHub actions.
-- is [Obsidian](https://obsidian.md/)-friendly (thanks to [Quartz][]). Just open the `content` folder in Obsidian.
+本模板仓库具有以下特点：
+- 以 Git 子模块形式集成了 Jacky Zhao 开发的 [Quartz][]，以便及时跟进其快速迭代。
+- 通过 GitHub Actions（GitHub 自动化工作流）从笔记内容构建网站，并将网站发布到 GitHub Pages。
+- 对 [Obsidian](https://obsidian.md/) 笔记软件友好（得益于 [Quartz][] 的支持），只需在 Obsidian 中打开 `content` 文件夹即可编辑笔记。
 
 [Quartz]: https://github.com/jackyzha0/quartz
 
-## Easiest way to use (without using Quartz locally)
 
-Click the big green `Use this template` button to create a repository. Clone the created repository using GitHub Desktop or `git clone` command:
+## 最简单的使用方法（无需在本地使用 Quartz）
+
+点击仓库页面中醒目的绿色 **`Use this template`（使用此模板）** 按钮创建新仓库。通过 GitHub Desktop（GitHub 桌面客户端）或 `git clone` 命令克隆创建好的仓库：
 
 ```bash
-git clone https://github.com/<username>/<reponame>.git
+git clone https://github.com/<用户名>/<仓库名>.git
 ```
 
-Open the `content` folder in Obsidian, edit/add notes and use GitHub Desktop or `git push` command to commit and push the changes to GitHub. GitHub actions will build and publish the website automatically.
+在 Obsidian 中打开 `content` 文件夹，编辑或新增笔记后，通过 GitHub Desktop 或 `git push` 命令提交并推送更改到 GitHub。GitHub Actions 会自动构建并发布网站。
 
 > [!IMPORTANT]
-> You need to enable GitHub pages in your repository settings -> pages -> selecting `GitHub actions` as the source.
+> 你需要在仓库设置中启用 GitHub Pages：进入仓库设置 → Pages（页面）→ 将来源选择为 `GitHub actions`（GitHub 工作流）。
 
-## How to use Quartz locally
 
-Click the big green `Use this template` button to create a repository.
+## 如何在本地使用 Quartz
 
-Since this repository has [Quartz][] as a submodule, if you want to use quartz to build/preview the website, you need to clone both the repository and the submodule:
+点击绿色的 **`Use this template`** 按钮创建仓库。
 
-```bash
-git clone --recursive https://github.com/<username>/<reponame>.git
-```
-
-To run Quartz in preview mode (See [Building your Quartz](https://quartz.jzhao.xyz/build) for details)
+由于本仓库将 [Quartz][] 作为子模块，如果需要使用 Quartz 本地构建/预览网站，需同时克隆主仓库和子模块：
 
 ```bash
-cd quartz
-npm i
-npx quartz build -d ../content --serve
+git clone --recursive https://github.com/<用户名>/<仓库名>.git
 ```
 
-You can open the `content` folder in Obsidian (or other editors) to edit/add your notes. After that, use GitHub Desktop or `git push` command to commit and push the changes to GitHub. GitHub actions will build and publish the website automatically.
+如需以预览模式运行 Quartz（详细步骤见 [Building your Quartz](https://quartz.jzhao.xyz/build)），执行以下命令：
+
+```bash
+cd quartz  # 进入 Quartz 子模块目录
+npm i      # 安装依赖（需先安装 Node.js）
+npx quartz build -d ../content --serve  # 构建并启动本地预览服务
+```
+
+你可以在 Obsidian（或其他编辑器）中打开 `content` 文件夹编辑/新增笔记。完成后，通过 GitHub Desktop 或 `git push` 命令提交并推送更改到 GitHub，GitHub Actions 会自动构建并发布网站。
 
 > [!IMPORTANT]
-> You need to enable GitHub pages in your repository settings -> pages -> selecting `GitHub actions` as the source.
+> 请务必在仓库设置中启用 GitHub Pages：进入仓库设置 → Pages → 将来源选择为 `GitHub actions`。
 
-## Cloudflare pages
 
-[Cloudflare pages](https://dash.cloudflare.com/) build configurations:
+## Cloudflare Pages（Cloudflare 页面）配置
 
-- Framework preset: `None`
-- Build command : `cp quartz.config.ts quartz.layout.ts quartz/ && cd quartz && npm ci && npx quartz build --directory ../content`
-- Build output directory: `quartz/public`
+[Cloudflare Pages](https://dash.cloudflare.com/)（Cloudflare 提供的静态网站托管服务）的构建配置如下：
+- 框架预设（Framework preset）：`None`（无）
+- 构建命令（Build command）：`cp quartz.config.ts quartz.layout.ts quartz/ && cd quartz && npm ci && npx quartz build --directory ../content`
+- 构建输出目录（Build output directory）：`quartz/public`
+
+
+### 补充说明
+1. **术语解释**：
+   - **Git 子模块（submodule）**：一种 Git 功能，允许将一个 Git 仓库作为另一个 Git 仓库的子目录，便于独立管理第三方代码（此处即 Quartz 工具）。
+   - **GitHub Actions**：GitHub 提供的自动化工具，可通过配置文件定义代码提交、合并后自动执行的操作（此处为“构建网站并发布到 GitHub Pages”）。
+   - **Obsidian**：一款流行的笔记软件，以“双链笔记”和“本地文件管理”为核心特点，适合构建个人知识库。
+
+2. **环境依赖**：
+   - 本地使用 Quartz 时，需先安装 [Node.js](https://nodejs.org/)（`npm` 是 Node.js 自带的包管理工具，用于执行 `npm i` 等命令）。
+   - 克隆仓库时，若未使用 `--recursive` 参数导致子模块未下载，可后续执行 `git submodule update --init --recursive` 补全子模块。
