@@ -8,19 +8,27 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "🪴 Quartz 4.0",
+    pageTitle: "Obsidian NoteBook",
+    pageTitleSuffix: " - Eric's Blog",
     enableSPA: true,
+
+    //是否在您的网站上启用弹出预览
     enablePopovers: true,
     analytics: null,
     locale: "en-US",
     baseUrl: "sosiristseng.github.io/template-quartz",
     ignorePatterns: ["private", "_templates", ".obsidian"],
+
+    //whether to use created, modified, or published 
+    // as the default date to display on pages and page listings.
     defaultDateType: "created",
     theme: {
       typography: {
+        titles: "Schibsted Grotesk",
         header: "Schibsted Grotesk",
         body: "Roboto",
-        code: "Fira Code",
+       // code: "Fira Code",
+        code: "JetBrains Mono",
       },
       colors: {
         lightMode: {
