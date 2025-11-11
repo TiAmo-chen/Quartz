@@ -1,5 +1,5 @@
 ---
-title: Example Title
+title: Obsidian语法大全
 draft: false
 tags:
   - example-tag
