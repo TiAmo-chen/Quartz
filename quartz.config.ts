@@ -17,7 +17,7 @@ const config: QuartzConfig = {
     analytics: null,
     locale: "en-US",
     baseUrl: "sosiristseng.github.io/template-quartz",
-    ignorePatterns: ["private", "_templates", ".obsidian"],
+    ignorePatterns: ["private", "_templates", ".obsidian","日记"],
 
     //whether to use created, modified, or published 
     // as the default date to display on pages and page listings.
