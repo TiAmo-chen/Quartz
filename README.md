@@ -10,6 +10,54 @@
 [Quartz]: https://github.com/jackyzha0/quartz
 
 
+## 如何在本地使用 Quartz
+
+点击绿色的 **`Use this template`** 按钮创建仓库。
+
+由于本仓库将 [Quartz][] 作为子模块，如果需要使用 Quartz 本地构建/预览网站，需同时克隆主仓库和子模块：
+
+```bash
+git clone --recursive https://github.com/TiAmo-chen/Quartz.git
+
+```
+
+如需以预览模式运行 Quartz（详细步骤见 [Building your Quartz](https://quartz.jzhao.xyz/build)），执行以下命令：
+
+```bash
+cd quartz  # 进入 Quartz 子模块目录
+npm i      # 安装依赖（需先安装 Node.js）
+npx quartz build -d ../content --serve  # 构建并启动本地预览服务
+```
+在"npx quartz build -d ../content --serve"这个命令之后无法正确启动本地预览服务
+
+显示
+```bash
+xuan.chen@chenxuan-nb MINGW64 /d/code/code/blogs/Quartz/quartz ((ef29c69...))
+$ npx quartz build -d ../content --serve
+(node:52280) ExperimentalWarning: Support for loading ES Module in require() is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+ Quartz v4.5.2
+
+```
+
+你可以在 Obsidian（或其他编辑器）中打开 `content` （不是子模块中的文件夹）文件夹编辑/新增笔记。
+完成后，通过 GitHub Desktop 或 `git push` 命令提交并推送更改到 GitHub，GitHub Actions 会自动构建并发布网站。
+
+```bash
+git add .
+git commit -m "update"
+git push
+```
+
+> [!IMPORTANT]
+> 请务必在仓库设置中启用 GitHub Pages：进入仓库设置 → Pages → 将来源选择为 `GitHub actions`。
+
+************************
+下面的不经常使用 
+************************
+
+
 ## 最简单的使用方法（无需在本地使用 Quartz）
 
 点击仓库页面中醒目的绿色 **`Use this template`（使用此模板）** 按钮创建新仓库。通过 GitHub Desktop（GitHub 桌面客户端）或 `git clone` 命令克隆创建好的仓库：
@@ -24,28 +72,6 @@ git clone https://github.com/<用户名>/<仓库名>.git
 > 你需要在仓库设置中启用 GitHub Pages：进入仓库设置 → Pages（页面）→ 将来源选择为 `GitHub actions`（GitHub 工作流）。
 
 
-## 如何在本地使用 Quartz
-
-点击绿色的 **`Use this template`** 按钮创建仓库。
-
-由于本仓库将 [Quartz][] 作为子模块，如果需要使用 Quartz 本地构建/预览网站，需同时克隆主仓库和子模块：
-
-```bash
-git clone --recursive https://github.com/<用户名>/<仓库名>.git
-```
-
-如需以预览模式运行 Quartz（详细步骤见 [Building your Quartz](https://quartz.jzhao.xyz/build)），执行以下命令：
-
-```bash
-cd quartz  # 进入 Quartz 子模块目录
-npm i      # 安装依赖（需先安装 Node.js）
-npx quartz build -d ../content --serve  # 构建并启动本地预览服务
-```
-
-你可以在 Obsidian（或其他编辑器）中打开 `content` 文件夹编辑/新增笔记。完成后，通过 GitHub Desktop 或 `git push` 命令提交并推送更改到 GitHub，GitHub Actions 会自动构建并发布网站。
-
-> [!IMPORTANT]
-> 请务必在仓库设置中启用 GitHub Pages：进入仓库设置 → Pages → 将来源选择为 `GitHub actions`。
 
 
 ## Cloudflare Pages（Cloudflare 页面）配置
