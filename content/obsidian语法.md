@@ -1,5 +1,6 @@
 ---
 title: Obsidian语法大全
+description: Obsidian使用
 draft: false
 tags:
   - example-tag
