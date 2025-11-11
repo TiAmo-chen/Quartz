@@ -1,5 +1,5 @@
 ---
-permalink: Index
+permalink: Index1
 title: Example Page
 description: Obsidian语法大全
 draft: false
