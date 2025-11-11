@@ -1,6 +1,7 @@
 ---
-title: Obsidian语法大全
-description: Obsidian使用
+permalink: Index
+title: Example Page
+description: Obsidian语法大全
 draft: false
 tags:
   - example-tag
