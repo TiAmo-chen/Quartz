@@ -1,0 +1,29 @@
+- [x] header_hash  XML的哈希值
+- [ ] program_hash - iotplat64哈希
+- [x] cm   固定值  界面
+- [x] factory_id    固定值  界面
+- [x] product_name  固定值  界面
+- [x] build_config  固定值  填写NULL 填充NA
+- [x] assembly_phase  固定值  界面
+- [x] build_phase  固定值  界面
+- [x] line_id   固定值  界面
+- [x] station_type   固定值  界面
+- [x] station_id   固定值  界面
+- [x] station_sequence   固定值  界面
+- [ ] slot  使用工装拨码进行区分
+- [x] fixture  固定值  填写NULL 填充NA
+- [x] test_count  1
+- [x] test_result 1-PASS，2-FAIL，3-ERROR(如果ini中的测试项在mes中找不到就填写3)
+- [x] test_status 1
+- [x] mes_status 1
+- [x] failures
+- [x] errors
+- [x] start_time
+- [x] duration
+- [x] hostname
+- [x] operator_id   固定值  界面
+- [x] serial_number SN
+- [x] zip_files  空值
+- [x] diags_version  空值
+- [x] firmware_version  空值
+- [x] os_version  空值
