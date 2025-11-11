@@ -1,10 +1,3 @@
----
-title: README
-description: 知识库内容体系概要
-draft: false
-tags:
-  - example-tag
----
 
 # 知识库内容体系概要
 
