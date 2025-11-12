@@ -1,6 +1,12 @@
+---
 
-The rest of your content lives here. You can use **Markdown** here :)
-
+title: Obsidian使用
+description: Obsidian使用
+permalink: Obsidian
+draft: true
+tags:
+  - example-tag
+---
 
 [Obsidian文档咖啡豆版](https://coffeetea.top/zh/)
 
