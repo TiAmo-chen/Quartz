@@ -27,7 +27,15 @@ git clone --recursive https://github.com/TiAmo-chen/Quartz.git
 cd quartz  # 进入 Quartz 子模块目录
 npm i      # 安装依赖（需先安装 Node.js）
 npx quartz build -d ../content --serve  # 构建并启动本地预览服务
+
+#20 线程解析
+npx quartz build -d ../content --serve --concurrency 20 
+
 ```
+
+
+
+#已解决  更新nodejs版本到最新就可以了
 在"npx quartz build -d ../content --serve"这个命令之后无法正确启动本地预览服务
 
 显示
