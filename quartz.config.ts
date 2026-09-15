@@ -18,7 +18,7 @@ const config: QuartzConfig = {
 	
 	// locale: "en-US"
     locale: "zh-CN",
-    baseUrl: "TiAmo-chen.github.io/Quartz",
+    baseUrl: "note.orangeheart.top",
     ignorePatterns: ["private", "_templates", ".obsidian","2025"],
 
     //whether to use created, modified, or published 
@@ -78,7 +78,7 @@ const config: QuartzConfig = {
       Plugin.Description(),
       Plugin.Latex({ renderEngine: "katex" }),
     ],
-    filters: [Plugin.RemoveDrafts()],
+    filters: [Plugin.RemoveDrafts(), Plugin.ExplicitPublish()],
     emitters: [
       Plugin.AliasRedirects(),
       Plugin.ComponentResources(),

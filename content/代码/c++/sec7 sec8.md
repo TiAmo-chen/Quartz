@@ -1,4 +1,3 @@
-
 ---
 title: "C++ primer plus函数定义与函数调用"
 description: "C++ primer plus 第7,8章节笔记，包括函数定义的基本语法、函数原型声明以及函数调用的实现方法。"
@@ -8,7 +7,7 @@ aliases: [C语言, 函数定义, 函数原型, 函数调用, 编程基础]
 created: "2024-12-28"
 modified: "2024-12-28"
 published: "2024-12-28"
-publish: false
+publish: true
 draft: false
 enableToc: true
 lang: "zh-CN"

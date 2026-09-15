@@ -1,5 +1,5 @@
-
 ---
+publish: true
 title: welcome
 description: index
 permalink: welcome

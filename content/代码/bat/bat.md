@@ -7,7 +7,7 @@ aliases: [Batch脚本, Windows命令行, 批处理, 系统管理, 脚本编程]
 created: "2025-11-12"
 modified: "2025-11-12"
 published: "2025-11-12"
-publish: false
+publish: true
 draft: false
 enableToc: true
 lang: "zh-CN"
